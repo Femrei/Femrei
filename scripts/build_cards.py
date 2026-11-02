@@ -319,14 +319,14 @@ def render_payda(c):
 <text x="24" y="40" font-size="13" font-weight="700" fill="{c['A']}">00</text>
 <text x="52" y="40" font-size="24" font-weight="700" fill="{c['T']}">PAYDA</text>
 <text x="146" y="40" font-size="12" fill="{c['M']}">Perakende Ajanlarıyla Yapay zekâ Destekli Alışveriş</text>
-<g><rect x="{PW - 214}" y="24" width="190" height="20" fill="none" stroke="{c['A']}"/>
-<text x="{PW - 119}" y="38" font-size="10" font-weight="700" fill="{c['A']}" text-anchor="middle">bitirme projesi · geliştiriliyor</text></g>
+<g><rect x="{PW - 134}" y="24" width="110" height="20" fill="none" stroke="{c['A']}"/>
+<text x="{PW - 79}" y="38" font-size="10" font-weight="700" fill="{c['A']}" text-anchor="middle">geliştiriliyor</text></g>
 <line x1="24" y1="58" x2="{PW - 24}" y2="58" stroke="{c['R']}"/>
 <text x="24" y="86" font-size="13" fill="{c['T']}">Zincir marketler ve toptancılar için yapay zekâ ajanlı, çok kiracılı (multi-tenant) SaaS platformu.</text>
 {body}
 <line x1="24" y1="360" x2="{PW - 24}" y2="360" stroke="{c['R']}"/>
 <text x="24" y="382" font-size="10" fill="{c['M']}">asp.net core · fastapi · postgresql · duckdb · pyspark · ollama · langgraph · pytorch · docker · aws</text>
-<text x="{PW - 24}" y="382" font-size="10" fill="{c['A']}" text-anchor="end">kto karatay üniversitesi</text>
+<text x="{PW - 24}" y="382" font-size="10" fill="{c['A']}" text-anchor="end">multi-tenant saas</text>
 </svg>
 """
 

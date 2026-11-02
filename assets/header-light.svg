@@ -9,7 +9,7 @@
     .box { fill: none; stroke: #b45309; stroke-width: 2; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 1.1s .2s cubic-bezier(.6,0,.2,1) forwards; }
     .tag { opacity: 0; animation: fade .3s 1.2s forwards; }
     .row { opacity: 0; animation: fade .4s forwards; }
-    .r1 { animation-delay: 1.4s; } .r2 { animation-delay: 1.55s; } .r3 { animation-delay: 1.7s; } .r4 { animation-delay: 1.85s; }
+    .r1 { animation-delay: 1.4s; } .r2 { animation-delay: 1.55s; } .r3 { animation-delay: 1.7s; }
     .curve { fill: none; stroke: #b45309; stroke-width: 1.6; stroke-linejoin: round; stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.8s 1.5s ease-out forwards; }
     .end { opacity: 0; animation: fade .3s 3.2s forwards; }
     @keyframes draw { to { stroke-dashoffset: 0; } }
@@ -35,10 +35,9 @@
 
   <!-- spesifikasyon satırları -->
   <g font-size="14">
-    <g class="row r1"><text x="40" y="172" class="a">›</text><text x="58" y="172" class="m">rol</text><text x="150" y="172" class="t">Backend &amp; AI Engineer · ML / DL · Data Science</text></g>
-    <g class="row r2"><text x="40" y="196" class="a">›</text><text x="58" y="196" class="m">şu an</text><text x="150" y="196" class="t">PAYDA: LLM, RAG ve ajan tabanlı perakende platformu</text></g>
-    <g class="row r3"><text x="40" y="220" class="a">›</text><text x="58" y="220" class="m">durum</text><text x="150" y="220" class="t">Bilgisayar Mühendisliği · KTO Karatay Üniversitesi</text></g>
-    <g class="row r4"><text x="40" y="244" class="a">›</text><text x="58" y="244" class="m">stack</text><text x="150" y="244" class="t">Python · C# · .NET · PyTorch · LangGraph · AWS</text></g>
+    <g class="row r1"><text x="40" y="180" class="a">›</text><text x="58" y="180" class="m">rol</text><text x="150" y="180" class="t">Backend &amp; AI Engineer · ML / DL · Data Science</text></g>
+    <g class="row r2"><text x="40" y="208" class="a">›</text><text x="58" y="208" class="m">durum</text><text x="150" y="208" class="t">Bilgisayar Mühendisliği · KTO Karatay Üniversitesi</text></g>
+    <g class="row r3"><text x="40" y="236" class="a">›</text><text x="58" y="236" class="m">stack</text><text x="150" y="236" class="t">Python · C# · .NET · PyTorch · LangGraph · AWS</text></g>
   </g>
 
   <!-- sağda küçük bir eğitim eğrisi -->

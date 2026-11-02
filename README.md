@@ -9,7 +9,7 @@ Backend mühendisliği ile yapay zekânın kesiştiği yerde çalışıyorum. **
 
 <img src="assets/cards/payda.svg" width="100%" alt="PAYDA: Perakende Ajanlarıyla Yapay zekâ Destekli Alışveriş">
 
-**PAYDA**, zincir marketler ve toptancılar için geliştirdiğim yapay zekâ ajanlı, çok kiracılı bir SaaS platformu ve KTO Karatay Üniversitesi Bilgisayar Mühendisliği bitirme projem. Gerçek bir toptan gıda zincirinin satış verisi üzerinde; kasada anında cevap veren bir öneri ve kural çekirdeğini, müşteriyle, çalışanla ve toptan alıcıyla konuşan bir ajan takımıyla tek platformda birleştiriyor.
+**PAYDA**, zincir marketler ve toptancılar için geliştirdiğim yapay zekâ ajanlı, çok kiracılı bir SaaS platformu. Gerçek bir toptan gıda zincirinin satış verisi üzerinde; kasada anında cevap veren bir öneri ve kural çekirdeğini, müşteriyle, çalışanla ve toptan alıcıyla konuşan bir ajan takımıyla tek platformda birleştiriyor.
 
 - **Backend ve platform:** ASP.NET Core ve EF Core ile çok kiracılı mimari, PostgreSQL Row Level Security ile veritabanı seviyesinde kiracı izolasyonu, JWT ve rol tabanlı yetki, Redis, Hangfire ile gece işleri, Nginx yük dengeleme ve YARP API gateway.
 - **Veri mühendisliği:** DuckDB, PySpark ve Pandas ile ETL/ELT hatları, HMAC ile anonimleştirme, feature store, tek kaynaktan tanımlanan metrik katmanı ve veri kalitesi skoru.
