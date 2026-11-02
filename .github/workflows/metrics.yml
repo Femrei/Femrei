@@ -33,16 +33,5 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_colors: "0:#f0a23b, 1:#c47a1f, 2:#e9973a, 3:#7a4d16, 4:#f8c77e, 5:#7d8590"
 
-      # habits eklentisi şu an GitHub events API'siyle hata veriyor ("Cannot destructure
-      # property 'author'"); yerine başarımlar kullanılıyor.
-      - name: Başarımlar
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: metrics/achievements.svg
-          base: ""
-          config_timezone: Europe/Istanbul
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: C
-          plugin_achievements_limit: 6
+# Not: habits ("Cannot destructure property 'author'") ve achievements (Projects classic
+# API'si kaldırıldı) eklentileri v3.34'te GitHub API'siyle hata veriyor; eklenmedi.
