@@ -1,0 +1,24 @@
+[
+  {
+    "type": "normal",
+    "fileName": "femrei-dark.svg",
+    "backgroundColor": "#0d1117",
+    "foregroundColor": "#e6edf3",
+    "strongColor": "#f0a23b",
+    "weakColor": "#7d8590",
+    "radarColor": "#f0a23b",
+    "growingAnimation": true,
+    "contribColors": ["#161b22", "#3d2a12", "#7a4d16", "#c47a1f", "#f0a23b"]
+  },
+  {
+    "type": "normal",
+    "fileName": "femrei-light.svg",
+    "backgroundColor": "#ffffff",
+    "foregroundColor": "#1f2328",
+    "strongColor": "#b45309",
+    "weakColor": "#656d76",
+    "radarColor": "#b45309",
+    "growingAnimation": true,
+    "contribColors": ["#ebedf0", "#fde7c7", "#f8c77e", "#e9973a", "#b45309"]
+  }
+]

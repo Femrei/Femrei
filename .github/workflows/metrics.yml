@@ -1,0 +1,43 @@
+name: metrics
+
+# METRICS_TOKEN: Settings > Developer settings > Personal access tokens ile
+# oluşturulan token, bu repo'nun Settings > Secrets > Actions kısmına eklenmeli.
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Diller
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/languages.svg
+          base: ""
+          config_timezone: Europe/Istanbul
+          plugin_languages: yes
+          plugin_languages_ignored: html, css, jupyter notebook, scss
+          plugin_languages_limit: 6
+          plugin_languages_details: percentage
+          plugin_languages_colors: "0:#f0a23b, 1:#c47a1f, 2:#e9973a, 3:#7a4d16, 4:#f8c77e, 5:#7d8590"
+
+      - name: Alışkanlıklar
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/habits.svg
+          base: ""
+          config_timezone: Europe/Istanbul
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_days: 30
+          plugin_habits_from: 300

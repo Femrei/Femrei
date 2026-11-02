@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" role="img" aria-label="LANE KEEPING">
+<style>
+  :root { --t: #1f2328; --m: #656d76; --a: #b45309; --r: #d0d7de; --ink: #ffffff; --bg: #ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --t: #e6edf3; --m: #7d8590; --a: #f0a23b; --r: #30363d; --ink: #0d1117; --bg: #0d1117; } }
+  text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+  .draw { stroke-dasharray: 380; stroke-dashoffset: 380; animation: draw 1s .3s cubic-bezier(.6,0,.2,1) forwards; }
+  .pop { opacity: 0; animation: fade .4s 1.1s forwards; }
+  .ring { transform-origin: 345px 100px; animation: ring 2s ease-out infinite; }
+  .r2 { animation-delay: 1s; }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  .dash { animation: dash 1s linear infinite; }
+  .scan { animation: scan 2.4s ease-in-out infinite alternate; }
+  .grow { transform-box: fill-box; transform-origin: bottom; animation: grow 1s .4s cubic-bezier(.2,.8,.2,1) both; }
+  .flow { stroke-dasharray: 4 6; animation: dash 1.2s linear infinite; }
+  .b1, .b2, .b3, .b4 { opacity: .25; animation: blink 2s infinite; }
+  .b2 { animation-delay: .25s; } .b3 { animation-delay: .5s; } .b4 { animation-delay: .75s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+  @keyframes ring { from { transform: scale(1); opacity: 1; } to { transform: scale(5); opacity: 0; } }
+  @keyframes pulse { 50% { opacity: .32; } }
+  @keyframes dash { to { stroke-dashoffset: -20; } }
+  @keyframes scan { to { transform: translateY(84px); } }
+  @keyframes grow { from { transform: scaleY(0); } }
+  @keyframes blink { 0%, 60%, 100% { opacity: .25; } 30% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw { animation: none; stroke-dashoffset: 0; }
+    .pop { animation: none; opacity: 1; }
+    .ring, .pulse, .dash, .scan, .grow, .flow, .b1, .b2, .b3, .b4 { animation: none; }
+  }
+</style>
+<rect x=".5" y=".5" width="439" height="199" style="fill:var(--bg);stroke:var(--r)"/><path d="M0 12 V0 H12 M428 0 H440 V12 M440 188 V200 H428 M12 200 H0 V188" fill="none" stroke-width="2" style="stroke:var(--a)"/>
+<text x="20" y="34" font-size="12" font-weight="700" style="fill:var(--a)">05</text>
+<text x="44" y="34" font-size="15" font-weight="700" style="fill:var(--t)">LANE KEEPING</text>
+<text x="420" y="34" font-size="10" text-anchor="end" style="fill:var(--m)">teknofest · otonom araç</text>
+<line x1="20" y1="46" x2="420" y2="46" style="stroke:var(--r)"/>
+<text x="20" y="72" font-size="12" style="fill:var(--t)">TEKNOFEST Otonom Araç yarışması</text><text x="20" y="90" font-size="12" style="fill:var(--t)">için geliştirilen; klasik görüntü</text><text x="20" y="108" font-size="12" style="fill:var(--t)">işleme ve geometriyle gerçek</text><text x="20" y="126" font-size="12" style="fill:var(--t)">zamanlı şerit takibi ve direksiyon</text><text x="20" y="144" font-size="12" style="fill:var(--t)">kestirimi yapan modüler sistem.</text>
+
+      <path d="M296 156 L346 60 L364 60 L424 156 Z" opacity=".18" class="pulse" style="fill:var(--a)"/>
+      <line x1="296" y1="156" x2="346" y2="60" stroke-width="2.5" style="stroke:var(--a)"/>
+      <line x1="424" y1="156" x2="364" y2="60" stroke-width="2.5" style="stroke:var(--a)"/>
+      <line x1="355" y1="150" x2="355" y2="64" stroke-width="2" stroke-dasharray="8 8" class="dash" style="stroke:var(--m)"/>
+      <path d="M355 140 Q357 112 368 92" fill="none" stroke-width="1.5" style="stroke:var(--t)"/>
+      <path d="M362 90 L371 87 L370 96" fill="none" stroke-width="1.5" style="stroke:var(--t)"/>
+      <text x="420" y="54" font-size="10" text-anchor="end" style="fill:var(--m)">steer</text>
+    
+<line x1="20" y1="172" x2="420" y2="172" style="stroke:var(--r)"/>
+<text x="20" y="190" font-size="10" style="fill:var(--m)">python · opencv · numpy · oop</text>
+<text x="420" y="190" font-size="10" text-anchor="end" style="fill:var(--a)">repo →</text>
+</svg>
