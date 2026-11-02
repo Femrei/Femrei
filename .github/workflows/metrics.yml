@@ -16,6 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
+      # Token'ın değerini değil, yalnızca izin listesini (X-OAuth-Scopes) yazdırır.
+      # Gizli repoların dil kartına girmesi için listede "repo" olmalı.
+      - name: Token izinleri
+        env:
+          T: ${{ secrets.METRICS_TOKEN }}
+        run: curl -sI -H "Authorization: token $T" https://api.github.com/user | grep -i '^x-oauth-scopes' || echo "izin başlığı okunamadı"
+
       - name: Diller
         uses: lowlighter/metrics@v3.34
         with:
