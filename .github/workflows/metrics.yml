@@ -14,7 +14,7 @@ permissions:
 jobs:
   metrics:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - name: Diller
         uses: lowlighter/metrics@v3.34
@@ -24,8 +24,11 @@ jobs:
           base: ""
           config_timezone: Europe/Istanbul
           plugin_languages: yes
-          # nopCommerce reposu hazır kod tabanının tamamını içeriyor; dil oranını yutmasın.
-          plugin_languages_skipped: nopCommerce-v4.80-Internship-Project
+          # Derinlemesine mod: repoların tamamı değil, yalnızca benim commit'lerimde yazdığım
+          # satırlar sayılır (nopCommerce'in hazır kod tabanı oranı yutmaz, kendi C# kodum görünür).
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 25
+          plugin_languages_analysis_timeout_repositories: 10
           # Takım projelerinin arayüz dilleri ve işaretleme dilleri sayılmaz.
           plugin_languages_ignored: html, css, scss, typescript, javascript, dart, c++, cmake, swift, kotlin, objective-c, batchfile, shell, dockerfile, procfile
           plugin_languages_aliases: "jupyter notebook:Notebook"
