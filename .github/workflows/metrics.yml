@@ -25,12 +25,15 @@ jobs:
           config_timezone: Europe/Istanbul
           plugin_languages: yes
           # Derinlemesine mod: repoların tamamı değil, yalnızca benim commit'lerimde yazdığım
-          # satırlar sayılır (nopCommerce'in hazır kod tabanı oranı yutmaz, kendi C# kodum görünür).
+          # satırlar dosya uzantısına göre sayılır.
           plugin_languages_indepth: yes
           plugin_languages_analysis_timeout: 25
           plugin_languages_analysis_timeout_repositories: 10
+          # nopCommerce'in hazır kod tabanı (~10 bin dosya) tek commit'le eklendiği için
+          # derinlemesine modda bile "benim kodum" sayılıp oranı yutuyor.
+          plugin_languages_skipped: nopCommerce-v4.80-Internship-Project
           # Takım projelerinin arayüz dilleri ve işaretleme dilleri sayılmaz.
-          plugin_languages_ignored: html, css, scss, typescript, javascript, dart, c++, cmake, swift, kotlin, objective-c, batchfile, shell, dockerfile, procfile
+          plugin_languages_ignored: html, css, scss, typescript, tsx, javascript, jsx, astro, vue, dart, c++, cmake, swift, kotlin, objective-c, batchfile, shell, powershell, dockerfile, procfile, json, yaml, markdown
           plugin_languages_aliases: "jupyter notebook:Notebook"
           plugin_languages_limit: 6
           plugin_languages_details: percentage
