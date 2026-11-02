@@ -29,6 +29,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics/languages.svg
+          debug: yes
           base: ""
           config_timezone: Europe/Istanbul
           plugin_languages: yes
