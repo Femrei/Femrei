@@ -21,6 +21,9 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: .github/3d-settings.json
 
+      - name: Yanıltıcı dil halkasını çıkar
+        run: python3 scripts/strip_pie.py profile-3d-contrib/femrei-dark.svg profile-3d-contrib/femrei-light.svg
+
       - name: Commit & Push
         run: |
           git config user.name github-actions
