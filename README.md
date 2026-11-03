@@ -60,7 +60,7 @@ PAYDA'nın temel platformunu ve veri katmanını kuruyorum; sırada öneri motor
   <img alt="3D katkı grafiği" src="profile-3d-contrib/femrei-light.svg" width="100%">
 </picture>
 
-<img src="metrics/languages.svg" width="60%" alt="En çok kullanılan diller">
+<img src="assets/languages.svg" width="100%" alt="En çok kullanılan diller">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Femrei/Femrei/output/snake-dark.svg">

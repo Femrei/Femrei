@@ -1,0 +1,33 @@
+name: diller
+
+# METRICS_TOKEN: `repo` izinli kişisel token; gizli repoların da dil istatistiğine
+# girmesi için gerekli. Repo'nun Settings > Secrets > Actions kısmında durur.
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Dil halkasını üret
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 scripts/build_languages.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add assets/languages.svg
+          if git commit -m "dil halkası güncellendi"; then
+            git push
+          fi
