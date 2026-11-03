@@ -2,6 +2,7 @@ name: diller
 
 # METRICS_TOKEN: `repo` izinli kişisel token; gizli repoların da dil istatistiğine
 # girmesi için gerekli. Repo'nun Settings > Secrets > Actions kısmında durur.
+# EXTRA_REPOS: başka hesap/kurum altındaki kendi repolarım ("sahip/repo,sahip/repo").
 
 on:
   schedule:
@@ -21,6 +22,7 @@ jobs:
       - name: Dil halkasını üret
         env:
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          EXTRA_REPOS: ${{ secrets.EXTRA_REPOS }}
         run: python3 scripts/build_languages.py
 
       - name: Commit & Push

@@ -17,10 +17,13 @@ OUT = Path(__file__).resolve().parent.parent / "assets" / "languages.svg"
 
 # Benim yazmadığım hazır kod tabanı + profil reposunun kendisi.
 SKIPPED_REPOS = {"nopCommerce-v4.80-Internship-Project", "Femrei"}
+# Bana ait olup başka bir hesap/kurum altında duran gizli repolar. Adları public
+# koda yazılmaz; EXTRA_REPOS secret'ından virgülle ayrılmış "sahip/repo" olarak gelir.
+EXTRA_REPOS = [r.strip() for r in os.environ.get("EXTRA_REPOS", "").split(",") if r.strip()]
 IGNORED = {
     "HTML", "CSS", "SCSS", "TypeScript", "JavaScript", "Astro", "Vue", "Dart", "C++", "C", "CMake",
     "Swift", "Kotlin", "Objective-C", "Batchfile", "Shell", "PowerShell", "Dockerfile", "Procfile",
-    "Scheme", "TeX", "PHP", "Makefile",
+    "Scheme", "TeX", "PHP", "Makefile", "BitBake",
 }
 ALIASES = {"PLpgSQL": "SQL", "TSQL": "SQL", "Jupyter Notebook": "Notebook"}
 TOP = 5
@@ -42,6 +45,14 @@ def api(path, token):
         return json.load(r)
 
 
+def add(totals, languages):
+    for lang, size in languages.items():
+        if lang in IGNORED:
+            continue
+        name = ALIASES.get(lang, lang)
+        totals[name] = totals.get(name, 0) + size
+
+
 def collect(token):
     totals = {}
     page = 1
@@ -52,12 +63,10 @@ def collect(token):
         for repo in repos:
             if repo["fork"] or repo["name"] in SKIPPED_REPOS:
                 continue
-            for lang, size in api(f"/repos/{repo['full_name']}/languages", token).items():
-                if lang in IGNORED:
-                    continue
-                name = ALIASES.get(lang, lang)
-                totals[name] = totals.get(name, 0) + size
+            add(totals, api(f"/repos/{repo['full_name']}/languages", token))
         page += 1
+    for full_name in EXTRA_REPOS:
+        add(totals, api(f"/repos/{full_name}/languages", token))
     return totals
 
 
